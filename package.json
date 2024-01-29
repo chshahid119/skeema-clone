@@ -1,0 +1,14 @@
+{
+  "name": "skeema",
+  "version": "1.0.0",
+  "description": "Skeema website clone using SASS",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Shahid",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
