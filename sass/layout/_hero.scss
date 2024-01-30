@@ -1,0 +1,48 @@
+.section-hero {
+  grid-column: full-start/full-end;
+  grid-row: 1/2;
+  border: 1px solid red;
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  &__nav {
+    grid-column: 2/12;
+    background-image: url(../../images/hero-section-bg.svg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 8rem 1fr;
+    justify-items: start;
+    align-items: center;
+
+    &-logo {
+      background-color: var(--color-primary-beige-light);
+      height: 5rem;
+      &-img {
+        width: 16rem;
+      }
+    }
+    &-btn {
+      justify-self: flex-end;
+      margin-right: 2rem;
+    }
+  }
+
+  &__shade {
+    &-left {
+      position: absolute;
+      left: -25rem;
+      top: -2rem;
+    }
+    &-right {
+      position: absolute;
+      right: -25rem;
+      top: 20rem;
+    }
+  }
+}
