@@ -1,9 +1,7 @@
 .section-hero {
   grid-column: full-start/full-end;
   grid-row: 1/2;
-  border: 1px solid red;
   position: relative;
-
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 
@@ -11,17 +9,17 @@
     grid-column: 2/12;
     background-image: url(../../images/hero-section-bg.svg);
     background-position: center;
-    background-size: 100% 100%;
+    background-size: 100% auto;
     background-repeat: no-repeat;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 8rem 1fr;
+    grid-template-rows: 8rem 5rem 1fr 1fr;
+    grid-row-gap: 8rem;
     justify-items: start;
     align-items: center;
 
     &-logo {
-      background-color: var(--color-primary-beige-light);
       height: 5rem;
       &-img {
         width: 16rem;
@@ -43,6 +41,46 @@
       position: absolute;
       right: -25rem;
       top: 20rem;
+    }
+  }
+  &__introduction {
+    grid-column: 1/-1;
+    grid-row: 2 / span 2;
+    justify-self: center;
+    align-self: end;
+    animation: myAnimation 2s ease-in-out;
+
+    &--p {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 1.8rem;
+      color: var(--dark-grey-2);
+    }
+
+    &-form {
+      grid-column: 1/-1;
+      justify-self: center;
+      align-self: flex-start;
+
+      &--input {
+        margin-top: 2rem;
+        padding: 3.2rem;
+        width: 35rem;
+        height: 3rem;
+        border-radius: 5rem;
+        border: 0.1rem solid var(--color-black);
+
+        &:focus {
+          outline: 0.1rem solid var(--color-black);
+        }
+
+        &::placeholder {
+          font-weight: 400;
+          font-size: 1.6rem;
+          letter-spacing: 0.1rem;
+          color: var(--dark-grey-2);
+        }
+      }
     }
   }
 }

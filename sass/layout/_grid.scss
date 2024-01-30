@@ -2,6 +2,7 @@
   background-color: var(--color-primary-beige-light);
 
   display: grid;
-  grid-template-rows: 80vh 20vh repeat(4, 1fr);
+  grid-template-rows: 75vh 20vh repeat(4, 1fr);
   grid-template-columns: [full-start] repeat(8, [col-start] 1fr [col-end]) [full-end];
+  gap: 5rem;
 }

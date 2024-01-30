@@ -17,6 +17,20 @@
   --sea-green: #48944f;
   --lavender-blush: #fbebeb; }
 
+@keyframes myAnimation {
+  /* Define the initial state (start of the animation) */
+  0% {
+    transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 0.5) rotateX(180deg) rotateY(180deg) rotateZ(180deg) skew(45deg, 45deg);
+    transform-origin: 100% 100%;
+    opacity: 0;
+    /* Set the initial opacity if needed */ }
+  /* Define the final state (end of the animation) */
+  100% {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-origin: 100% 100%;
+    opacity: 1;
+    /* Set the final opacity */ } }
+
 *,
 *::after,
 *::before {
@@ -32,29 +46,43 @@ html {
 body {
   font-weight: 400;
   line-height: 1.6;
-  font-family: Inter, sans-serif; }
-
-.get-started-btn {
-  background-color: #9a9abf;
-  padding: 2rem; }
+  font-family: Inter, sans-serif;
+  overflow-x: hidden; }
 
 .primary-btn:link, .primary-btn:visited {
   padding: 1.5rem;
-  color: #000;
+  color: var(--color-black);
+  border: 0.1rem solid var(--color-black);
   text-decoration: none;
   font-size: 1.5rem;
-  border: 0.1rem solid #000;
   border-radius: 3rem;
   transition: 0.3s background-color; }
 
 .primary-btn:hover, .primary-btn:active {
   background-color: var(--white); }
 
+.primary-btn-black {
+  background-color: var(--color-black);
+  padding: 2.5rem 2.5rem;
+  color: var(--white);
+  border-radius: 5rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+  margin-left: -12rem; }
+
+.heading-primary {
+  font-weight: 700;
+  font-size: 6rem;
+  grid-column: 1/-1;
+  align-self: center;
+  justify-self: center; }
+
 .container {
   background-color: var(--color-primary-beige-light);
   display: grid;
-  grid-template-rows: 80vh 20vh repeat(4, 1fr);
-  grid-template-columns: [full-start] repeat(8, [col-start] 1fr [col-end]) [full-end]; }
+  grid-template-rows: 75vh 20vh repeat(4, 1fr);
+  grid-template-columns: [full-start] repeat(8, [col-start] 1fr [col-end]) [full-end];
+  gap: 5rem; }
 
 .section-aboutus {
   background-color: orangered;
@@ -80,7 +108,6 @@ body {
 .section-hero {
   grid-column: full-start/full-end;
   grid-row: 1/2;
-  border: 1px solid red;
   position: relative;
   display: grid;
   grid-template-columns: repeat(12, 1fr); }
@@ -88,15 +115,15 @@ body {
     grid-column: 2/12;
     background-image: url(../../images/hero-section-bg.svg);
     background-position: center;
-    background-size: 100% 100%;
+    background-size: 100% auto;
     background-repeat: no-repeat;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 8rem 1fr;
+    grid-template-rows: 8rem 5rem 1fr 1fr;
+    grid-row-gap: 8rem;
     justify-items: start;
     align-items: center; }
     .section-hero__nav-logo {
-      background-color: var(--color-primary-beige-light);
       height: 5rem; }
       .section-hero__nav-logo-img {
         width: 16rem; }
@@ -111,6 +138,35 @@ body {
     position: absolute;
     right: -25rem;
     top: 20rem; }
+  .section-hero__introduction {
+    grid-column: 1/-1;
+    grid-row: 2 / span 2;
+    justify-self: center;
+    align-self: end;
+    animation: myAnimation 2s ease-in-out; }
+    .section-hero__introduction--p {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 1.8rem;
+      color: var(--dark-grey-2); }
+    .section-hero__introduction-form {
+      grid-column: 1/-1;
+      justify-self: center;
+      align-self: flex-start; }
+      .section-hero__introduction-form--input {
+        margin-top: 2rem;
+        padding: 3.2rem;
+        width: 35rem;
+        height: 3rem;
+        border-radius: 5rem;
+        border: 0.1rem solid var(--color-black); }
+        .section-hero__introduction-form--input:focus {
+          outline: 0.1rem solid var(--color-black); }
+        .section-hero__introduction-form--input::placeholder {
+          font-weight: 400;
+          font-size: 1.6rem;
+          letter-spacing: 0.1rem;
+          color: var(--dark-grey-2); }
 
 .section-problems {
   background-color: #144c7c;

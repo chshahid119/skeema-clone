@@ -2,15 +2,24 @@
   &-btn:link,
   &-btn:visited {
     padding: 1.5rem;
-    color: #000;
+    color: var(--color-black);
+    border: 0.1rem solid var(--color-black);
     text-decoration: none;
     font-size: 1.5rem;
-    border: 0.1rem solid #000;
     border-radius: 3rem;
     transition: 0.3s background-color;
   }
   &-btn:hover,
   &-btn:active {
     background-color: var(--white);
+  }
+  &-btn-black {
+    background-color: var(--color-black);
+    padding: 2.5rem 2.5rem;
+    color: var(--white);
+    border-radius: 5rem;
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin-left: -12rem;
   }
 }

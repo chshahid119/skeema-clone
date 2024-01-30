@@ -1,0 +1,17 @@
+@keyframes myAnimation {
+  /* Define the initial state (start of the animation) */
+  0% {
+    transform: translate3d(0px, 0px, 0px) scale3d(0.5, 0.5, 0.5) rotateX(180deg)
+      rotateY(180deg) rotateZ(180deg) skew(45deg, 45deg);
+    transform-origin: 100% 100%;
+    opacity: 0; /* Set the initial opacity if needed */
+  }
+
+  /* Define the final state (end of the animation) */
+  100% {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-origin: 100% 100%;
+    opacity: 1; /* Set the final opacity */
+  }
+}
