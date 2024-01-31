@@ -1,5 +1,21 @@
 .section-realtors {
-  background-color: rgb(106, 106, 3);
+  padding: 3rem 2rem;
+  background-color: var(--color-featured-in-bg);
+  margin-top: 5rem;
   grid-column: full-start/full-end;
   grid-row: 2/3;
+
+  &__companies {
+    margin-top: 4rem;
+    display: grid;
+    grid-row: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+
+    &-logo {
+      width: 10rem;
+    }
+  }
 }
