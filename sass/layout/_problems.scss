@@ -1,18 +1,111 @@
 .section-problems {
   grid-column: col-start 2 / col-end 7;
   grid-row: 3/4;
-  border: 1px solid red;
+}
 
+.problems {
   &__cards {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(9, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
 
-    &-card {
-      display: flex;
+    &--1 {
+      grid-column: 1 / span 3;
+    }
+    &--2 {
+      grid-column: 4 / span 3;
+    }
+    &--3 {
+      grid-column: 7 / span 3;
     }
   }
 }
 
-.number-icon {
+.card-container {
+  margin-top: 10rem;
+  min-height: 32rem;
   display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  background-color: #fcf9f4;
+  border-radius: 1.3rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &__logoNum {
+    display: flex;
+    justify-content: space-between;
+
+    &--num {
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--dark-grey-2);
+      position: relative;
+
+      &::after {
+        content: ".";
+        position: absolute;
+        top: -0.73rem;
+        left: 0.3rem;
+      }
+    }
+    &--logo1 {
+      background-color: var(--color-misty-rose);
+      border-radius: 2rem;
+      padding: 1.2rem 1.4rem;
+      transition: all 0.5s;
+
+      &-width {
+        width: 2.5rem;
+      }
+
+      &:hover {
+        background-color: #decbcb;
+        transform: scale(1.1);
+      }
+    }
+
+    &--logo2 {
+      background-color: var(--color-alice-blue);
+      border-radius: 2rem;
+      padding: 1.2rem 1.4rem;
+      transition: all 0.5s;
+
+      &-width {
+        width: 2.5rem;
+      }
+      &:hover {
+        background-color: #c1d4dd;
+        transform: scale(1.1);
+      }
+    }
+
+    &--logo3 {
+      background-color: var(--color-aquamarine);
+      border-radius: 2rem;
+      padding: 1.2rem 1.4rem;
+      transition: all 0.5s;
+
+      &-width {
+        width: 2.5rem;
+      }
+      &:hover {
+        background-color: #88c480;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__description {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--dark-grey-2);
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }

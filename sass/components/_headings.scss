@@ -1,19 +1,26 @@
-.heading-primary {
-  font-weight: 700;
-  font-size: 4.5rem;
+.heading {
+  &-primary {
+    font-weight: 700;
+    font-size: 4.5rem;
 
-  align-self: center;
-  justify-self: center;
-}
+    align-self: center;
+    justify-self: center;
+  }
+  &-secondary {
+    font-size: 3rem;
+    font-weight: 500;
+  }
 
-.heading-secondary {
-  font-size: 3rem;
-  font-weight: 500;
-}
+  &-tertiary {
+    width: 15rem;
+    font-weight: 400;
+    font-size: 2rem;
+  }
 
-.heading-4 {
-  text-align: center;
-  font-weight: 400;
-  color: var(--dark-grey-2);
-  text-transform: uppercase;
+  &-4 {
+    text-align: center;
+    font-weight: 400;
+    color: var(--dark-grey-2);
+    text-transform: uppercase;
+  }
 }

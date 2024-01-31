@@ -6,5 +6,5 @@
       1fr
     );
   grid-template-columns: [full-start] repeat(8, [col-start] 1fr [col-end]) [full-end];
-  gap: 5rem;
+  grid-row-gap: 15rem;
 }
