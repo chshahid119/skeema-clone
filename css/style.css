@@ -1,3 +1,12 @@
+.feature-grid__headings-1, .feature-grid__headings-2 {
+  display: grid;
+  grid-row-gap: 3rem; }
+
+.testemonials-1, .testemonials-2, .testemonials-3, .testemonials-4, .testemonials-5, .testemonials-6 {
+  padding: 3rem;
+  line-height: 1.5;
+  font-size: 1.5rem; }
+
 :root {
   --color-primary-beige-light: #f8f2e8;
   --color-primary-beige-dark: #dfdad1;
@@ -72,7 +81,7 @@ body {
   background-color: var(--color-black);
   padding: 2.5rem 2.5rem;
   color: var(--white);
-  border-radius: 5rem;
+  border-radius: 4.5rem;
   text-decoration: none;
   font-size: 1.8rem;
   margin-left: -12rem; }
@@ -101,46 +110,79 @@ body {
 .section-aboutus {
   background-color: orangered;
   grid-column: col-start 3 / col-end 6;
-  grid-row: 6/7; }
+  grid-row: 7/8; }
 
 .section-cta {
-  background-color: #bd71bd;
+  background-color: #f9f8f5;
+  background-image: url(../../images/shades/shade-4.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
   grid-column: col-start 2 / col-end 7;
-  grid-row: 5/6; }
+  grid-row: 6/7;
+  border-radius: 3.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .section-features {
   grid-column: col-start 2 / col-end 7;
   grid-row: 4/5; }
 
-.features-container {
+.feature-grid {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   align-items: center;
-  justify-items: center;
-  grid-row-gap: 30rem; }
-  .features-container__heading-1 {
-    grid-column: 2 / span 3;
+  grid-row-gap: 25rem;
+  grid-column-gap: 5rem; }
+  .feature-grid__headings-1 {
+    grid-column: 2 / span 3; }
+  .feature-grid__headings-2 {
+    grid-column: 6 / span 3; }
+  .feature-grid__headings--spaceBetween {
     display: grid;
-    grid-row-gap: 3rem; }
-    .features-container__heading-1-2 {
-      grid-column: 6 / span 4;
-      display: grid;
-      grid-row-gap: 3rem; }
-  .features-container-imgdiv {
-    grid-column: 6 / span 4; }
-    .features-container-imgdiv img {
+    grid-template-columns: repeat(9, 1fr);
+    cursor: pointer; }
+    .feature-grid__headings--spaceBetween div {
+      grid-column: 7/8;
+      margin-top: -2rem; }
+  .feature-grid__image-1 {
+    transition: all 0.3s;
+    cursor: pointer;
+    z-index: 10000;
+    grid-column: 6/-1;
+    position: relative; }
+    .feature-grid__image-1 img {
       width: 100%; }
-    .features-container-imgdiv-2 {
-      grid-column: 1 / span 4; }
-  .features-container-flex-numlogo {
-    display: flex;
-    justify-content: space-between; }
+    .feature-grid__image-1--background-shade {
+      position: absolute;
+      right: -10rem;
+      width: 100rem;
+      z-index: -1; }
+    .feature-grid__image-1:hover {
+      transform: scale(1.1); }
+  .feature-grid__image-2 {
+    transition: all 0.3s;
+    cursor: pointer;
+    grid-column: 1 / span 4;
+    position: relative; }
+    .feature-grid__image-2 img {
+      width: 100%; }
+    .feature-grid__image-2--background-shade {
+      position: absolute;
+      width: 100%;
+      left: -5rem;
+      top: -10rem;
+      z-index: -1; }
+    .feature-grid__image-2:hover {
+      transform: scale(1.1); }
 
 .section-footer {
   background-color: #000;
   color: white;
   grid-column: full-start / full-end;
-  grid-row: 6/7; }
+  grid-row: 8/9; }
 
 .section-hero {
   grid-column: full-start/full-end;
@@ -210,7 +252,8 @@ body {
 
 .section-problems {
   grid-column: col-start 2 / col-end 7;
-  grid-row: 3/4; }
+  grid-row: 3/4;
+  margin-top: 15rem; }
 
 .problems__cards {
   display: grid;
@@ -289,11 +332,11 @@ body {
 .section-realtors {
   padding: 3rem 2rem;
   background-color: var(--color-featured-in-bg);
-  margin-top: 5rem;
+  margin-top: 3rem;
   grid-column: full-start/full-end;
   grid-row: 2/3; }
   .section-realtors__companies {
-    margin-top: 4rem;
+    margin-top: 3rem;
     display: grid;
     grid-row: 1fr;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -304,13 +347,228 @@ body {
       width: 10rem; }
 
 .section-testemonials {
-  background-color: #3e3f41;
   grid-column: col-start 2 / col-end 7;
-  grid-row: 5/6; }
+  grid-row: 5/6;
+  margin-top: 25rem;
+  margin-bottom: 10rem; }
+
+.testemonials-intro {
+  text-align: center; }
+
+.testemonials {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 3rem;
+  grid-row-gap: 1rem; }
+  .testemonials-1 {
+    grid-column: 1 / span 3;
+    grid-row: 1/2;
+    padding: 4.8rem 3.6rem;
+    align-self: center;
+    background-color: var(--color-aquamarine);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative; }
+    .testemonials-1::before {
+      content: "\201C";
+      font-family: sans-serif;
+      position: absolute;
+      left: 1rem;
+      color: rgba(251, 251, 251, 0.692);
+      opacity: 0.6;
+      top: -5rem;
+      font-size: 15rem; }
+    .testemonials-1::after {
+      content: "\201D";
+      font-family: sans-serif;
+      position: absolute;
+      right: 1rem;
+      color: rgba(251, 251, 251, 0.692);
+      bottom: -5rem;
+      opacity: 0.6;
+      font-size: 15rem; }
+    .testemonials-1 p {
+      padding: 0.5rem; }
+    .testemonials-1 author {
+      padding: 0.5rem;
+      font-weight: 600; }
+  .testemonials-2 {
+    grid-column: 4 / span 3;
+    grid-row: 1/2;
+    padding: 4.8rem 3.6rem;
+    background-color: var(--color-misty-rose);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative; }
+    .testemonials-2::before {
+      content: "\201C";
+      font-family: sans-serif;
+      position: absolute;
+      left: 1rem;
+      color: rgba(251, 251, 251, 0.692);
+      opacity: 0.6;
+      top: -5rem;
+      font-size: 15rem; }
+    .testemonials-2::after {
+      content: "\201D";
+      font-family: sans-serif;
+      position: absolute;
+      right: 1rem;
+      color: rgba(251, 251, 251, 0.692);
+      bottom: -5rem;
+      opacity: 0.6;
+      font-size: 15rem; }
+    .testemonials-2 p {
+      padding: 0.5rem; }
+    .testemonials-2 author {
+      padding: 0.5rem;
+      font-weight: 600; }
+  .testemonials-3 {
+    grid-column: 7 / span 3;
+    grid-row: 1/2;
+    padding: 4.8rem 3.6rem;
+    align-self: center;
+    background-color: var(--color-light-yellow);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative; }
+    .testemonials-3::before {
+      content: "\201C";
+      font-family: sans-serif;
+      position: absolute;
+      left: 1rem;
+      color: rgba(251, 251, 251, 0.692);
+      opacity: 0.6;
+      top: -5rem;
+      font-size: 15rem; }
+    .testemonials-3::after {
+      content: "\201D";
+      font-family: sans-serif;
+      position: absolute;
+      right: 1rem;
+      color: rgba(251, 251, 251, 0.692);
+      bottom: -5rem;
+      opacity: 0.6;
+      font-size: 15rem; }
+    .testemonials-3 p {
+      padding: 0.5rem; }
+    .testemonials-3 author {
+      padding: 0.5rem;
+      font-weight: 600; }
+  .testemonials-4 {
+    grid-column: 1 / span 3;
+    grid-row: 2/-1;
+    padding: 4.8rem 3.6rem;
+    align-self: center;
+    background-color: var(--color-alice-blue);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative; }
+    .testemonials-4::before {
+      content: "\201C";
+      font-family: sans-serif;
+      position: absolute;
+      left: 1rem;
+      color: rgba(251, 251, 251, 0.692);
+      opacity: 0.6;
+      top: -5rem;
+      font-size: 15rem; }
+    .testemonials-4::after {
+      content: "\201D";
+      font-family: sans-serif;
+      position: absolute;
+      right: 1rem;
+      color: rgba(251, 251, 251, 0.692);
+      bottom: -5rem;
+      opacity: 0.6;
+      font-size: 15rem; }
+    .testemonials-4 p {
+      padding: 0.5rem; }
+    .testemonials-4 author {
+      padding: 0.5rem;
+      font-weight: 600; }
+  .testemonials-5 {
+    grid-column: 4 / span 3;
+    grid-row: 2/-1;
+    align-self: center;
+    padding: 4.8rem 3.6rem;
+    background-color: var(--color-light-yellow);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative; }
+    .testemonials-5::before {
+      content: "\201C";
+      font-family: sans-serif;
+      position: absolute;
+      left: 1rem;
+      color: rgba(251, 251, 251, 0.692);
+      opacity: 0.6;
+      top: -5rem;
+      font-size: 15rem; }
+    .testemonials-5::after {
+      content: "\201D";
+      font-family: sans-serif;
+      position: absolute;
+      right: 1rem;
+      color: rgba(251, 251, 251, 0.692);
+      bottom: -5rem;
+      opacity: 0.6;
+      font-size: 15rem; }
+    .testemonials-5 p {
+      padding: 0.5rem; }
+    .testemonials-5 author {
+      padding: 0.5rem;
+      font-weight: 600; }
+  .testemonials-6 {
+    grid-column: 7 / span 3;
+    grid-row: 2/-1;
+    padding: 4.8rem 3.6rem;
+    align-self: center;
+    background-color: var(--color-aquamarine);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative; }
+    .testemonials-6::before {
+      content: "\201C";
+      font-family: sans-serif;
+      position: absolute;
+      left: 1rem;
+      color: rgba(251, 251, 251, 0.692);
+      opacity: 0.6;
+      top: -5rem;
+      font-size: 15rem; }
+    .testemonials-6::after {
+      content: "\201D";
+      font-family: sans-serif;
+      position: absolute;
+      right: 1rem;
+      color: rgba(251, 251, 251, 0.692);
+      bottom: -5rem;
+      opacity: 0.6;
+      font-size: 15rem; }
+    .testemonials-6 p {
+      padding: 0.5rem; }
+    .testemonials-6 author {
+      padding: 0.5rem;
+      font-weight: 600; }
 
 .container {
   background-color: var(--color-primary-beige-light);
   display: grid;
-  grid-template-rows: minmax(max-content, 75vh) minmax(max-content, 25vh) repeat(4, 1fr);
+  grid-template-rows: minmax(max-content, 75vh) minmax(max-content, 25vh) 90rem 1fr 1fr 35rem 30rem 30rem;
   grid-template-columns: [full-start] repeat(8, [col-start] 1fr [col-end]) [full-end];
-  grid-row-gap: 15rem; }
+  grid-row-gap: 3rem; }

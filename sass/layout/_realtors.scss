@@ -1,12 +1,12 @@
 .section-realtors {
   padding: 3rem 2rem;
   background-color: var(--color-featured-in-bg);
-  margin-top: 5rem;
+  margin-top: 3rem;
   grid-column: full-start/full-end;
   grid-row: 2/3;
 
   &__companies {
-    margin-top: 4rem;
+    margin-top: 3rem;
     display: grid;
     grid-row: 1fr;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));

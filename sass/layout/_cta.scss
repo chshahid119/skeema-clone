@@ -1,5 +1,14 @@
 .section-cta {
-  background-color: rgb(189, 113, 189);
+  background-color: #f9f8f5;
+  background-image: url(../../images/shades/shade-4.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
   grid-column: col-start 2 / col-end 7;
-  grid-row: 5/6;
+  grid-row: 6/7;
+  border-radius: 3.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

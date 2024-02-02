@@ -1,5 +1,156 @@
 .section-testemonials {
-  background-color: rgb(62, 63, 65);
   grid-column: col-start 2 / col-end 7;
   grid-row: 5/6;
+  margin-top: 25rem;
+  margin-bottom: 10rem;
+}
+
+.testemonials-intro {
+  text-align: center;
+}
+
+.testemonials {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 3rem;
+  grid-row-gap: 1rem;
+
+  &-1 {
+    grid-column: 1 / span 3;
+    grid-row: 1/2;
+    padding: 4.8rem 3.6rem;
+    align-self: center;
+    background-color: var(--color-aquamarine);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    @include quotation-mark-start;
+    @include quotation-mark-end;
+    @extend %testemonials-common;
+
+    p {
+      padding: 0.5rem;
+    }
+    author {
+      padding: 0.5rem;
+      font-weight: 600;
+    }
+  }
+  &-2 {
+    grid-column: 4 / span 3;
+    grid-row: 1/2;
+    padding: 4.8rem 3.6rem;
+    background-color: var(--color-misty-rose);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    @include quotation-mark-start;
+    @include quotation-mark-end;
+    @extend %testemonials-common;
+    p {
+      padding: 0.5rem;
+    }
+    author {
+      padding: 0.5rem;
+      font-weight: 600;
+    }
+  }
+  &-3 {
+    grid-column: 7 / span 3;
+    grid-row: 1/2;
+    padding: 4.8rem 3.6rem;
+    align-self: center;
+    background-color: var(--color-light-yellow);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    @include quotation-mark-start;
+    @include quotation-mark-end;
+    @extend %testemonials-common;
+    p {
+      padding: 0.5rem;
+    }
+    author {
+      padding: 0.5rem;
+      font-weight: 600;
+    }
+  }
+
+  &-4 {
+    grid-column: 1 / span 3;
+    grid-row: 2/-1;
+    padding: 4.8rem 3.6rem;
+    align-self: center;
+    background-color: var(--color-alice-blue);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    @include quotation-mark-start;
+    @include quotation-mark-end;
+    @extend %testemonials-common;
+    p {
+      padding: 0.5rem;
+    }
+    author {
+      padding: 0.5rem;
+      font-weight: 600;
+    }
+  }
+
+  &-5 {
+    grid-column: 4 / span 3;
+    grid-row: 2/-1;
+    align-self: center;
+    padding: 4.8rem 3.6rem;
+    background-color: var(--color-light-yellow);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    @include quotation-mark-start;
+    @include quotation-mark-end;
+    @extend %testemonials-common;
+    p {
+      padding: 0.5rem;
+    }
+    author {
+      padding: 0.5rem;
+      font-weight: 600;
+    }
+  }
+
+  &-6 {
+    grid-column: 7 / span 3;
+    grid-row: 2/-1;
+    padding: 4.8rem 3.6rem;
+    align-self: center;
+    background-color: var(--color-aquamarine);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    @include quotation-mark-start;
+    @include quotation-mark-end;
+    @extend %testemonials-common;
+    p {
+      padding: 0.5rem;
+    }
+
+    author {
+      padding: 0.5rem;
+      font-weight: 600;
+    }
+  }
 }

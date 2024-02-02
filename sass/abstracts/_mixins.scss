@@ -1,4 +1,41 @@
-@mixin addGap {
+@mixin spaceBetween {
   display: grid;
-  grid-row-gap: 3rem;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+@mixin transition-pointer {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+@mixin hover-scale {
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@mixin quotation-mark-start {
+  &::before {
+    content: "\201C";
+    font-family: sans-serif;
+    position: absolute;
+    left: 1rem;
+    color: rgba(251, 251, 251, 0.692);
+    opacity: 0.6;
+    top: -5rem;
+    font-size: 15rem;
+  }
+}
+
+@mixin quotation-mark-end {
+  &::after {
+    content: "\201D";
+    font-family: sans-serif;
+    position: absolute;
+    right: 1rem;
+    color: rgba(251, 251, 251, 0.692);
+    bottom: -5rem;
+    opacity: 0.6;
+    font-size: 15rem;
+  }
 }

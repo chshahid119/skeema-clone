@@ -1,10 +1,10 @@
 .container {
   background-color: var(--color-primary-beige-light);
   display: grid;
-  grid-template-rows: minmax(max-content, 75vh) minmax(max-content, 25vh) repeat(
-      4,
-      1fr
-    );
+  grid-template-rows:
+    minmax(max-content, 75vh) minmax(max-content, 25vh) 90rem 1fr 1fr 35rem
+    30rem 30rem;
+
   grid-template-columns: [full-start] repeat(8, [col-start] 1fr [col-end]) [full-end];
-  grid-row-gap: 15rem;
+  grid-row-gap: 3rem;
 }
