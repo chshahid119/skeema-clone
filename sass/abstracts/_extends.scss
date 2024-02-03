@@ -8,3 +8,13 @@
   line-height: 1.5;
   font-size: 1.5rem;
 }
+
+
+%submit-form-inputs-common{
+  &:focus{
+    outline: 0.5rem solid var(--color-alice-blue); 
+  }
+  &::placeholder{
+    font-size: 1.5rem;
+  }
+}

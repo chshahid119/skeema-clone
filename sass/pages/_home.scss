@@ -2,9 +2,10 @@
   background-color: var(--color-primary-beige-light);
   display: grid;
   grid-template-rows:
-    minmax(max-content, 75vh) minmax(max-content, 25vh) 90rem 1fr 1fr 35rem
-    30rem 30rem;
+    minmax(max-content, 75vh) minmax(max-content, 25vh) 90rem 1fr 1fr minmax(max-content,40rem)
+    max-content max-content;
 
   grid-template-columns: [full-start] repeat(8, [col-start] 1fr [col-end]) [full-end];
   grid-row-gap: 3rem;
+  
 }

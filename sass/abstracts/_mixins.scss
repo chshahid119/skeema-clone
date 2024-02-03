@@ -39,3 +39,7 @@
     font-size: 15rem;
   }
 }
+
+@mixin boxShadow{
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.183);
+}
