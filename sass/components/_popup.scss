@@ -65,7 +65,7 @@
         &--checkbox-box{
           display: flex;
          
-          gap: 6rem;
+          gap: 2rem;
           
   
           &-remember{
@@ -75,7 +75,7 @@
             &-label{
               display: flex;
               align-items: center;
-              font-size: 1.7rem;
+              font-size: 1.5rem;
             }
             
   
@@ -90,7 +90,7 @@
         }
   
         &-signInBtn{
-          padding: 2rem;
+          padding: 2rem 1rem;
           text-decoration: none;
           color: var(--color-black);
           font-weight: 600;
