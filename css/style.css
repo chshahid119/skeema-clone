@@ -343,7 +343,7 @@ body {
       width: 100%; }
       @media only screen and (max-width: 37.5em) {
         .feature-grid__image-1 img {
-          width: 90%; } }
+          width: 80%; } }
     .feature-grid__image-1--background-shade {
       position: absolute;
       right: -10rem;
@@ -356,7 +356,7 @@ body {
       transform: scale(1.1); }
     @media only screen and (max-width: 37.5em) {
       .feature-grid__image-1 {
-        grid-column: 2 / -2;
+        grid-column: 1 / -2;
         justify-items: center; } }
   .feature-grid__image-2 {
     transition: all 0.3s;
@@ -367,7 +367,7 @@ body {
       width: 100%; }
       @media only screen and (max-width: 37.5em) {
         .feature-grid__image-2 img {
-          width: 90%; } }
+          width: 80%; } }
     .feature-grid__image-2--background-shade {
       position: absolute;
       width: 100%;
@@ -381,7 +381,7 @@ body {
       transform: scale(1.1); }
     @media only screen and (max-width: 37.5em) {
       .feature-grid__image-2 {
-        grid-column: 2 / -2;
+        grid-column: 1 / -2;
         justify-items: center; } }
 
 .section-footer {
