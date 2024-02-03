@@ -313,7 +313,7 @@ body {
         grid-column: 1 / span 4; } }
     @media only screen and (max-width: 37.5em) {
       .feature-grid__headings-1 {
-        grid-column: 1 / -1;
+        grid-column: 1 / -2;
         justify-items: center; } }
   .feature-grid__headings-2 {
     z-index: 1000000000000000;
@@ -323,7 +323,7 @@ body {
         grid-column: 6 / span 4; } }
     @media only screen and (max-width: 37.5em) {
       .feature-grid__headings-2 {
-        grid-column: 1 / -1;
+        grid-column: 1 / -2;
         grid-row: 3/4;
         justify-items: center; } }
   .feature-grid__headings--spaceBetween {
