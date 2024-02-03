@@ -255,20 +255,26 @@ body {
 
 .section-aboutus {
   grid-column: col-start 3 / col-end 6;
-  grid-row: 7/8; }
+  grid-row: 7/8;
+  background-image: url(../../images/shades/shade-02.svg);
+  background-size: 100%;
+  overflow: auto;
+  background-position: cover; }
   @media only screen and (max-width: 56.25em) {
     .section-aboutus {
       grid-column: col-start 2/ col-end 7; } }
 
-.about-us__pageName {
-  margin-top: 20rem; }
-  .about-us__pageName p {
-    font-size: 2.7rem;
-    line-height: 2; }
-    @media only screen and (max-width: 37.5em) {
-      .about-us__pageName p {
-        font-size: 2rem;
-        line-height: 1.5; } }
+.about-us {
+  background-color: blue; }
+  .about-us__pageName {
+    margin-top: 20rem; }
+    .about-us__pageName p {
+      font-size: 2.3rem;
+      line-height: 2; }
+      @media only screen and (max-width: 37.5em) {
+        .about-us__pageName p {
+          font-size: 2rem;
+          line-height: 1.5; } }
 
 .section-cta {
   background-color: #f9f8f5;

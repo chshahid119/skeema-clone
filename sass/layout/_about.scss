@@ -2,6 +2,10 @@
  
   grid-column: col-start 3 / col-end 6;
   grid-row: 7/8;
+   background-image: url(../../images/shades/shade-02.svg);
+  background-size: 100%;
+  overflow: auto;
+  background-position: cover;
 
   @include respond(tab-port){
     grid-column:col-start 2/ col-end 7;
@@ -9,12 +13,16 @@
 }
 
 .about-us{
+  background-color: blue;
+  // background-image: url(../../images/shades/shade-02.svg);
+  // background-size: 100%;
+  // background-position: cover;
   
 
   &__pageName{
     margin-top: 20rem;
     p{
-      font-size: 2.7rem;
+      font-size: 2.3rem;
       line-height: 2;
 
       @include respond(phone){
