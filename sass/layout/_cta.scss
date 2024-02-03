@@ -13,6 +13,12 @@
   align-items: center;
   position: relative;
   overflow: visible;
+  padding: 5rem 10rem;
+
+  @include respond(phone){
+    background-size: 100%;
+    grid-column: col-start 1/ col-end -1;
+  }
 
 }
 

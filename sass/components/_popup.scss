@@ -4,12 +4,13 @@
     font-family: 2rem;
     display: none;
     position: fixed;
-    z-index: 99999;
+    z-index: 99999999999999999999999999999999999999;
     top: 0;
     left: 0;
     -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
       background-color: rgba(var(--color-black), 0.7);
+     
   
   
       &__content{
@@ -24,7 +25,7 @@
       padding: 5rem;
       opacity: 0;
       transform:  scale(0.25);
-      transition: all 0.5s 0.2s;
+      transition: scale 2s;
   
         .svg{
           width: 8rem;
@@ -33,24 +34,32 @@
         &--input-id{
           display: block;
           padding: 2rem;
-          width: 30%;
+          width: 50%;
           border-radius: 3rem;
           border: none;
   
           @include boxShadow;
           @extend %submit-form-inputs-common;
+
+          @include respond(phone){
+            width: 100%;
+          }
         }
   
         &--input-password{
           display: block;
           padding: 2rem;
-          width: 30%;
+          width: 50%;
           border-radius: 3rem;
           border: none;
           box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.183);
   
           @include boxShadow;
           @extend %submit-form-inputs-common;
+
+          @include respond(phone){
+            width: 100%;
+          }
         }
   
         &--checkbox-box{

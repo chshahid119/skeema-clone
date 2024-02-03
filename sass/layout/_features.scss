@@ -19,6 +19,7 @@
 
   &__headings {
     &-1 {
+      z-index: 1000000000000000;
       grid-column: 2 / span 3;
       @extend %row-gap;
 
@@ -34,6 +35,7 @@
     }
 
     &-2 {
+      z-index: 1000000000000000;
       grid-column: 6 / span 3;
       @extend %row-gap;
 
@@ -68,6 +70,10 @@
       position: relative;
       img {
         width: 100%;
+
+        @include respond(phone){
+          width: 90%;
+        }
       }
 
       &--background-shade {
@@ -75,12 +81,15 @@
         right: -10rem;
         width: 100rem;
         z-index: -1;
+        @include respond(phone){
+          left: 7rem
+        }
       }
 
       @include hover-scale;
 
       @include respond(phone){
-        grid-column: 1 / -1;
+        grid-column: 2 / -2;
         justify-items: center;
       
       }
@@ -93,6 +102,10 @@
 
       img {
         width: 100%;
+
+        @include respond(phone){
+          width: 90%;
+        }
       }
 
       &--background-shade {
@@ -101,12 +114,15 @@
         left: -5rem;
         top: -10rem;
         z-index: -1;
+        @include respond(phone){
+          left: -3rem
+        }
       }
 
       @include hover-scale;
 
       @include respond(phone){
-        grid-column: 1 / -1;
+        grid-column: 2 / -2;
         justify-items: center;
       
       }
