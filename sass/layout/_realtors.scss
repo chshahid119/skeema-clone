@@ -18,6 +18,11 @@
       width: 10rem;
     }
 
+    svg{
+      width: 10rem;
+      color: black;
+    }
+
 
     @include respond(tab-port){
       grid-row-gap:5rem;
