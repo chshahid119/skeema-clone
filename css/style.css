@@ -13,6 +13,23 @@
 .popup__content--input-id::placeholder, .popup__content--input-password::placeholder {
   font-size: 1.5rem; }
 
+/*
+0   -  600px:       Phone
+600 -  900px:       Tablet portrait
+900 -  1200px:      Tablet Landscape
+[1200 - 1800]       Normal Styles apply here
+1800px +           Big Desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em=16px
+*/
 :root {
   --color-primary-beige-light: #f8f2e8;
   --color-primary-beige-dark: #dfdad1;
@@ -57,7 +74,17 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overflow-x: hidden; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-weight: 400;
@@ -103,6 +130,9 @@ body {
   font-size: 4.5rem;
   align-self: center;
   justify-self: center; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-primary {
+      text-align: center; } }
 
 .heading-secondary {
   font-size: 3rem;
@@ -163,10 +193,13 @@ body {
       box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.183); }
     .popup__content--checkbox-box {
       display: flex;
-      gap: 5rem; }
+      gap: 6rem; }
       .popup__content--checkbox-box-remember {
-        font-size: 1.7rem;
         display: block; }
+        .popup__content--checkbox-box-remember-label {
+          display: flex;
+          align-items: center;
+          font-size: 1.7rem; }
       .popup__content--checkbox-box-forget {
         font-size: 1.5rem;
         color: var(--color-black); }
@@ -195,6 +228,9 @@ body {
 .section-aboutus {
   grid-column: col-start 3 / col-end 6;
   grid-row: 7/8; }
+  @media only screen and (max-width: 56.25em) {
+    .section-aboutus {
+      grid-column: col-start 2/ col-end 7; } }
 
 .about-us__pageName {
   margin-top: 20rem; }
@@ -219,19 +255,38 @@ body {
   overflow: visible; }
 
 .section-features {
+  margin-top: 20rem;
   grid-column: col-start 2 / col-end 7;
   grid-row: 4/5; }
 
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
-  align-items: center;
+  align-items: end;
   grid-row-gap: 25rem;
   grid-column-gap: 5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .feature-grid {
+      grid-row-gap: 7rem; } }
   .feature-grid__headings-1 {
     grid-column: 2 / span 3; }
+    @media only screen and (max-width: 56.25em) {
+      .feature-grid__headings-1 {
+        grid-column: 1 / span 4; } }
+    @media only screen and (max-width: 37.5em) {
+      .feature-grid__headings-1 {
+        grid-column: 1 / -1;
+        justify-items: center; } }
   .feature-grid__headings-2 {
     grid-column: 6 / span 3; }
+    @media only screen and (max-width: 56.25em) {
+      .feature-grid__headings-2 {
+        grid-column: 6 / span 4; } }
+    @media only screen and (max-width: 37.5em) {
+      .feature-grid__headings-2 {
+        grid-column: 1 / -1;
+        grid-row: 3/4;
+        justify-items: center; } }
   .feature-grid__headings--spaceBetween {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
@@ -254,6 +309,10 @@ body {
       z-index: -1; }
     .feature-grid__image-1:hover {
       transform: scale(1.1); }
+    @media only screen and (max-width: 37.5em) {
+      .feature-grid__image-1 {
+        grid-column: 1 / -1;
+        justify-items: center; } }
   .feature-grid__image-2 {
     transition: all 0.3s;
     cursor: pointer;
@@ -269,6 +328,10 @@ body {
       z-index: -1; }
     .feature-grid__image-2:hover {
       transform: scale(1.1); }
+    @media only screen and (max-width: 37.5em) {
+      .feature-grid__image-2 {
+        grid-column: 1 / -1;
+        justify-items: center; } }
 
 .section-footer {
   background-color: #000;
@@ -387,15 +450,27 @@ body {
   align-items: center;
   justify-content: center;
   gap: 6rem; }
+  @media only screen and (max-width: 37.5em) {
+    .problems__cards {
+      gap: 4rem; } }
   .problems__cards--1 {
     grid-column: 1 / span 3; }
+    @media only screen and (max-width: 37.5em) {
+      .problems__cards--1 {
+        grid-column: 2/-2;
+        margin-top: 10rem; } }
   .problems__cards--2 {
     grid-column: 4 / span 3; }
+    @media only screen and (max-width: 37.5em) {
+      .problems__cards--2 {
+        grid-column: 2/-2; } }
   .problems__cards--3 {
     grid-column: 7 / span 3; }
+    @media only screen and (max-width: 37.5em) {
+      .problems__cards--3 {
+        grid-column: 2/-2; } }
 
 .card-container {
-  margin-top: 10rem;
   min-height: 32rem;
   display: flex;
   flex-direction: column;
@@ -471,11 +546,14 @@ body {
     align-items: center; }
     .section-realtors__companies-logo {
       width: 10rem; }
+    @media only screen and (max-width: 56.25em) {
+      .section-realtors__companies {
+        grid-row-gap: 5rem; } }
 
 .section-testemonials {
   grid-column: col-start 2 / col-end 7;
   grid-row: 5/6;
-  margin-top: 25rem;
+  margin-top: 20rem;
   margin-bottom: 10rem; }
 
 .testemonials-intro {
@@ -488,6 +566,11 @@ body {
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 3rem;
   grid-row-gap: 1rem; }
+  @media only screen and (max-width: 37.5em) {
+    .testemonials {
+      grid-template-rows: repeat(6, 1fr);
+      align-items: start;
+      grid-row-gap: 0.5rem; } }
   .testemonials-1 {
     grid-column: 1 / span 3;
     grid-row: 1/2;
@@ -522,6 +605,10 @@ body {
     .testemonials-1 author {
       padding: 0.5rem;
       font-weight: 600; }
+    @media only screen and (max-width: 37.5em) {
+      .testemonials-1 {
+        grid-column: 1/-1;
+        grid-row: 1/2; } }
   .testemonials-2 {
     grid-column: 4 / span 3;
     grid-row: 1/2;
@@ -555,6 +642,10 @@ body {
     .testemonials-2 author {
       padding: 0.5rem;
       font-weight: 600; }
+    @media only screen and (max-width: 37.5em) {
+      .testemonials-2 {
+        grid-column: 1/-1;
+        grid-row: 2/3; } }
   .testemonials-3 {
     grid-column: 7 / span 3;
     grid-row: 1/2;
@@ -589,6 +680,10 @@ body {
     .testemonials-3 author {
       padding: 0.5rem;
       font-weight: 600; }
+    @media only screen and (max-width: 37.5em) {
+      .testemonials-3 {
+        grid-column: 1/-1;
+        grid-row: 3/4; } }
   .testemonials-4 {
     grid-column: 1 / span 3;
     grid-row: 2/-1;
@@ -623,6 +718,10 @@ body {
     .testemonials-4 author {
       padding: 0.5rem;
       font-weight: 600; }
+    @media only screen and (max-width: 37.5em) {
+      .testemonials-4 {
+        grid-column: 1/-1;
+        grid-row: 4/5; } }
   .testemonials-5 {
     grid-column: 4 / span 3;
     grid-row: 2/-1;
@@ -657,6 +756,10 @@ body {
     .testemonials-5 author {
       padding: 0.5rem;
       font-weight: 600; }
+    @media only screen and (max-width: 37.5em) {
+      .testemonials-5 {
+        grid-column: 1/-1;
+        grid-row: 5/6; } }
   .testemonials-6 {
     grid-column: 7 / span 3;
     grid-row: 2/-1;
@@ -691,10 +794,14 @@ body {
     .testemonials-6 author {
       padding: 0.5rem;
       font-weight: 600; }
+    @media only screen and (max-width: 37.5em) {
+      .testemonials-6 {
+        grid-column: 1/-1;
+        grid-row: 6/7; } }
 
 .container {
   background-color: var(--color-primary-beige-light);
   display: grid;
-  grid-template-rows: minmax(max-content, 75vh) minmax(max-content, 25vh) 90rem 1fr 1fr minmax(max-content, 40rem) max-content max-content;
+  grid-template-rows: minmax(max-content, 75vh) minmax(max-content, 25vh) max-content max-content 1fr minmax(max-content, 40rem) max-content max-content;
   grid-template-columns: [full-start] repeat(8, [col-start] 1fr [col-end]) [full-end];
   grid-row-gap: 3rem; }

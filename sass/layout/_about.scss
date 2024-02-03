@@ -2,6 +2,10 @@
  
   grid-column: col-start 3 / col-end 6;
   grid-row: 7/8;
+
+  @include respond(tab-port){
+    grid-column:col-start 2/ col-end 7;
+  }
 }
 
 .about-us{

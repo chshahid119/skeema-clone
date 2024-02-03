@@ -55,12 +55,20 @@
   
         &--checkbox-box{
           display: flex;
-          gap: 5rem;
+         
+          gap: 6rem;
           
   
           &-remember{
-            font-size: 1.7rem;
+            
             display: block;
+
+            &-label{
+              display: flex;
+              align-items: center;
+              font-size: 1.7rem;
+            }
+            
   
           }
   

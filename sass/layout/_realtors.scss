@@ -17,5 +17,10 @@
     &-logo {
       width: 10rem;
     }
+
+
+    @include respond(tab-port){
+      grid-row-gap:5rem;
+    }
   }
 }
